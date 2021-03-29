@@ -1,9 +1,9 @@
 import React, { useContext } from 'react';
 import context from '../../context';
 import styled from 'styled-components';
-import { Container, Row, Col } from 'react-bootstrap';
+import { Row, Col } from 'react-bootstrap';
 
-import { Section } from '../../styled-components';
+import { Section, Container } from '../../styled-components';
 
 const SectionCustom = styled(Section)`
 
@@ -35,7 +35,7 @@ const Description = styled.div`
 export default ()=> {
   const state = useContext(context);
   return(
-    <SectionCustom>
+    <SectionCustom id="history">
       <Container>
         <Row>
           <Col xs={12} md={{ span: 7, order: 2 }}>
@@ -44,7 +44,7 @@ export default ()=> {
           <Col xs={12} md={{ span: 5, order: 1 }}>
             <InfoCont>
             <Title>
-              {state.about.history.title}
+              ¿Quienes somos?
             </Title>
             <Description dangerouslySetInnerHTML={{ __html: state.about.history.description }} />
             </InfoCont>

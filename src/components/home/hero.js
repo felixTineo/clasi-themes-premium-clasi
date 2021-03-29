@@ -34,7 +34,7 @@ const TitleCont = styled.div`
     height: calc(75vh - 153.38px);
   }
   @media(min-width: 1350px){
-    height: calc(60vh - 117.38px);
+    height: calc(50vh - 117.38px);
   }
 `
 const Title = styled.h1`
@@ -56,7 +56,7 @@ const VideoCont = styled.div`
   justify-content: center;
   align-items: center;
   @media(min-width: 768px){
-    height: 40vh;
+    height: 50vh;
   }
 `
 const VideoOverLay = styled.div`

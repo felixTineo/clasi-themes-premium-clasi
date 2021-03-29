@@ -10,7 +10,7 @@ import { Autocomplete, Select, Input } from '../inputs';
 import PROPERTY_TYPE from '../../constants/PROPERTY_TYPE.json';
 import COMMUNES from '../../constants/CITIES.json';
 import { Button } from '../../styled-components';
-import AniLink from "gatsby-plugin-transition-link/AniLink";
+import Link from "../link";
 
 const Form = styled.form`
   padding: 0;
@@ -41,6 +41,7 @@ const ButtonCustom = styled(Button)`
   box-shadow: none !important;
   border: none;
   border-left: 1px solid ${props => props.theme.primaryColor};
+  padding: 1px 6px;
 `
 const MoreFilterCont = styled.div`
   display: flex;
@@ -164,7 +165,7 @@ export default ({ withFilters, id })=> {
                 />          
               </Col>      
               <Col xs={12} md={1}>
-                <AniLink fade to={getUrl()} duration={.5}>
+                <Link fade to={getUrl()} duration={.5}>
                   <ButtonCustom
                     block
                     primary
@@ -175,8 +176,8 @@ export default ({ withFilters, id })=> {
                     <span className="d-xs-block d-md-none">Buscar</span>
                     <SearchOutlined className="d-none d-md-block" />
                   </ButtonCustom>
-                </AniLink>
-                <AniLink fade to={getUrl()} duration={.5}>
+                </Link>
+                <Link fade to={getUrl()} duration={.5}>
                   <Button
                     block
                     primary
@@ -187,7 +188,7 @@ export default ({ withFilters, id })=> {
                     <span className="d-xs-block d-md-none">Buscar</span>
                     <SearchOutlined className="d-none d-md-block" />
                   </Button>
-                </AniLink>                
+                </Link>                
               </Col>
             </Fragment>
           )
@@ -258,7 +259,7 @@ export default ({ withFilters, id })=> {
                 />           
               </Col>   
               <Col xs={12} md={1}>
-                <AniLink fade to={getUrl()} duration={.5}>
+                <Link fade to={getUrl()} duration={.5}>
                   <ButtonCustom
                       block
                       primary
@@ -269,7 +270,7 @@ export default ({ withFilters, id })=> {
                     <span className="d-xs-block d-md-none">Aplicar</span>
                     <CheckOutlined className="d-none d-md-block" />
                   </ButtonCustom>
-                </AniLink>
+                </Link>
               </Col>                              
             </Row>
           </FormInnerCont>

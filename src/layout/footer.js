@@ -1,12 +1,12 @@
 import React, { useContext } from 'react';
 import context from '../context';
 import styled from 'styled-components';
-import { Container, Row, Col } from 'react-bootstrap';
-import AniLink from "gatsby-plugin-transition-link/AniLink";
+import { Row, Col } from 'react-bootstrap';
+import Link from "../components/link";
 import { MailOutlined, PhoneOutlined, WhatsAppOutlined, EnvironmentOutlined, FacebookOutlined, InstagramOutlined, TwitterOutlined, UpOutlined } from '@ant-design/icons';
 
 import Logo from './logo';
-import { NavLink } from '../styled-components';
+import { NavLink, Container } from '../styled-components';
 import Map from '../components/map';
 
 const Footer = styled.footer`
@@ -52,7 +52,13 @@ const NavList = styled.ul`
   margin-bottom: 1rem;
 `
 const NavItem = styled.li`
-font-size: .8rem;
+  font-size: .8rem;
+  margin-left: ${props => props.first ? "0" : "2rem"};
+  color: #808080;
+  transition: 250ms ease;
+  &:hover{
+    color: inherit;
+  }
 `
 const SocialCont = styled.div`
   display: flex;
@@ -127,9 +133,9 @@ export default ()=> {
       <Container>
         <Row className="align-items-center">
           <Col xs={{ span: 6, order: 6 }} md={{ span: 6, order: 0 }} lg={4}>
-            <AniLink paintDrip hex={state.primaryColor} to="/" duration={.5}>
+            <Link paintDrip hex={state.primaryColor} to="/" duration={.5}>
               <Logo dark />
-            </AniLink>
+            </Link>
             <InfoList>
               {
                 state.address && (
@@ -174,33 +180,27 @@ export default ()=> {
           <Col xs={12} md={6} lg={5}>
             <NavCont>
               <NavList>
-                <NavItem>
-                  <AniLink paintDrip hex={state.primaryColor} to="/properties" duration={.5}>
-                    <NavLink first>
+                <NavItem first>
+                  <Link paintDrip hex={state.primaryColor} to="/properties" duration={.5}>
+
                       Propiedades
-                    </NavLink>
-                  </AniLink>            
+
+                  </Link>            
                 </NavItem>
                 <NavItem>
-                  <AniLink paintDrip hex={state.primaryColor} to="/about" duration={.5}>
-                    <NavLink>
+                  <Link paintDrip hex={state.primaryColor} to="/about" duration={.5}>
                       Nosotros
-                    </NavLink>
-                  </AniLink>            
+                  </Link>            
                 </NavItem>                  
                 <NavItem>
-                  <AniLink paintDrip hex={state.primaryColor} to="/contact" duration={.5}>
-                    <NavLink >
+                  <Link paintDrip hex={state.primaryColor} to="/contact" duration={.5}>
                       Contacto
-                    </NavLink>
-                  </AniLink>                                    
+                  </Link>                                    
                 </NavItem>
                 <NavItem>
-                  <AniLink href={`http://app.clasihome.com/login?logo=${state.logo}&primaryColor=${state.primaryColor.substring(1)}`} target="_blank" rel="noopener" duration={.5}>
-                    <NavLink >
+                  <Link href={`http://app.clasihome.com/login?logo=${state.logo}&primaryColor=${state.primaryColor.substring(1)}`} target="_blank" rel="noopener" duration={.5}>
                       Login
-                    </NavLink>
-                  </AniLink>            
+                  </Link>            
                 </NavItem>    
               </NavList>            
               <FooterText>

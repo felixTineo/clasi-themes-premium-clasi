@@ -5,19 +5,19 @@ export default (data) => {
       typeId: data.user ? "user" : "office",
       officeId: data.user ? data.user : data.office,
       primaryColor: data.primaryColor ? data.primaryColor : "#00aeef",
-      address: data.address ? data.address : "chile, santiago. Av 1 calle 2 local 1a",
-      email: data.email ? data.email : "contacto@clasihome.com",
-      facebook: data.facebook ? data.facebook : "https://facebook.com",
+      address: data.address ? data.address : "La Capitanía 80, Las Condes, Región Metropolitana",
+      email: data.email ? data.email : "paola.munoz@pmasesoriasinmobiliarias.cl",
+      facebook: data.facebook ? data.facebook : "https://www.facebook.com/PAOLA-MU%C3%91OZ-Asesora-inmobiliaria-1019102384919138",
       twitter: data.twitter ? data.twitter : "https://twitter.com",
-      instagram: data.instagram ? data.instagram : "https://instagram.com",
+      instagram: data.instagram ? data.instagram : "https://www.instagram.com/pmasesoriasinmobiliarias/",
       favicon: data.favicon ? data.favicon : require("../images/icon.png"),      
       lat: data.lat ? data.lat : "-33.410167",
       lng: data.lng ? data.lng : "-70.655265",
       logo: data.logo ? data.logo : require("../images/logo-light.jpg"),
       logoDark: data.logoDark ? data.logoDark : require("../images/logo-light.jpg"),
-      movil: data.movil ? data.movil : "+56 9 1234 1234",
-      phone: data.phone ? data.phone : "+56 2 1234 1234",
-      footerText: data.footerText ? data.footerText : "Somos una empresa con mas de 20 años en el rubro del corretaje inmobiliario",
+      movil: data.movil ? data.movil : "",
+      phone: data.phone ? data.phone : "(+569) 4265 6968",
+      footerText: data.footerText ? data.footerText : "Somos una empresa con más de 1.400 clientes satisfechos.",
       home:{
         hero: {
           background: data.home && data.home.hero && data.home.hero.background ? data.home.hero.background : require("../images/template-home-hero-background.jpg"),
@@ -32,8 +32,8 @@ export default (data) => {
         about: {
           banner: {
             image: data.home && data.home.about && data.home.about.banner && data.home.about.banner.image ? data.home.about.banner.image : require("../images/template-home-about-hero-background.jpg"),
-            title: data.home && data.home.about && data.home.about.banner && data.home.about.banner.title ? data.home.about.banner.title : "Somos una empresa con mas de 20 años en el rubro del corretaje inmobiliario",
-            subTitle: data.home && data.home.about && data.home.about.banner && data.home.about.banner.subTitle ? data.home.about.banner.subTitle : "Esto nos permite entender mejor que nadie las necesidades de nuestros clientes, por eso ponemos el foco en que la experienca de compra o arriendo sea única",
+            title: data.home && data.home.about && data.home.about.banner && data.home.about.banner.title ? data.home.about.banner.title : "Somos una empresa con más de 1.400 clientes satisfechos",
+            subTitle: data.home && data.home.about && data.home.about.banner && data.home.about.banner.subTitle ? data.home.about.banner.subTitle : "Somos una empresa inmobiliaria destinada a satisfacer las necesidades de nuestros clientes compradores y vendedores, asegurando un proceso de negociación confiable, contamos con personal altamente calificado basándonos en herramientas tecnológicas que nos permite tener un mayor alcance en el mercado.",
             buttonText: data.home && data.home.about && data.home.about.banner && data.home.about.banner.buttonText ? data.home.about.banner.buttonText : "Conózcanos"
           }
         },  
@@ -80,22 +80,30 @@ export default (data) => {
         },
         history: {
           background: data.about && data.about.history && data.about.history.background ? data.about.history.background : require("../images/template-about-history-background.jpg"),
-          description: data.about && data.about.history && data.about.history.description ? data.about.history.description : "<p>Somos clasihome, una empresa con varios años de trayectoria en el dinámico mercado inmobiliario, reconocidos por un servicio altamente personalizado y eficiente.</p><p>Nuestra gran fortaleza es el profundo conocimiento comercial inmobiliario que nos permite agregar valor a todos los proyectos que emprendemos y servicios que entregamos.<p/>",
+          description: data.about && data.about.history && data.about.history.description ? data.about.history.description : "<p>Somos una empresa inmobiliaria destinada a satisfacer las necesidades de nuestros clientes compradores y vendedores, asegurando un proceso de negociación confiable, contamos con personal altamente calificado basándonos en herramientas tecnológicas que nos permite tener un mayor alcance en el mercado.<p/>",
           title: data.about && data.about.history && data.about.history.title ? data.about.history.title : "Nuestra Historia"
         },
         description: {
           items: data.about && data.about.description && data.about.description.items.length ? data.about.description.items : [
             {
-              title: "Misión",
-              description: "En el ámbito de todo negocio inmobiliario, que nuestros clientes nos reconozcan como la mejor opción para exigir el máximo provecho a sus recursos inmobiliario."
+              title: "PROFESIONALIDAD",
+              description: "Agencias consolidadas en el mercado son garantía de éxito y dan mucha tranquilidad a los futuros compradores.Cada vez son más los índices de satisfacción y las encuestas que favorecen esta actividad. Encuestas sobre calidad de servicio han arrojado una muy buena calificación a inmobiliarias formales. Una razón para elegir  una inmobiliaria es la formalidad a la hora de dejar en manos de otros su inmueble."
             },
             {
-              title: "Visión",
-              description: "En el ámbito de todo negocio inmobiliario, que nuestros clientes nos reconozcan como la mejor opción para exigir el máximo provecho a sus recursos inmobiliario."
+              title: "NEGOCIACIÓN",
+              description: "Los asesores inmobiliarios tienen especialmente desarrolladas las capacidades para negociar, por lo que es más probable que consigan mejores condiciones de venta de las que lograrías tú. Además, así te evitas pasar por algunos malos tragos derivados de este tipo de acuerdos."
             },
             {
-              title: "Valores",
-              description: "En el ámbito de todo negocio inmobiliario, que nuestros clientes nos reconozcan como la mejor opción para exigir el máximo provecho a sus recursos inmobiliario."
+              title: "TIEMPO",
+              description: "Dejar el proceso de compra en manos de una inmobiliaria te evitará muchos dolores de cabeza. Visitas innecesarias, llamadas telefónicas, tramitación de papeles, largos tiempo de espera y muchos otros asuntos. Todo eso queda en manos del asesor inmobiliario, tú tan sólo tendrás que escoger la propiedad que te interesa y desentenderte de lo demás."
+            },
+            {
+              title: "ASESORAMIENTO LEGAL Y FINANCIERO",
+              description: "Al ser especialistas en transacciones inmobiliarias, los asesores pueden brindarte información en temas legales y económicos. También pueden gestionar los trámites ante notarios y abogados, figuras importantes en este tipo de procesos y que mucha gente desconoce hasta que no se encuentra en una situación así."
+            },
+            {
+              title: "ESPECIALISTAS",
+              description: "Al conocer el sector inmobiliario aporta una seguridad extra a quienes quieren adquirir una vivienda. Las agencias pueden encontrar ofertas interesantes, dar con los propietarios adecuados, buscar zonas que sean una buena inversión y muchas otras cosas más, logrando de esta forma la optimización de los recursos confiados a nuestra empresa. Es lo que brinda la experiencia y la personalización del negocio."
             }
           ]
         },
@@ -109,34 +117,29 @@ export default (data) => {
           visible: true,
           items: data.about && data.about.team && data.about.team.items.length ? data.about.team.items : [
             {
+              id: "user-1",
               avatar: require("../images/template-team-member-1.jpg"),
               cv: "Ingeniero Comercial, Master en Finanzas. Inversor inmobiliario, con 6 años de experiencia en Banca, Mesa de Dinero. 6 años en el corretaje de propiedades, especializado en el manejo de cartera de propiedades. ",
               email: "usuario1@example.com",
-              fullName: "Usuario 1",
+              fullName: "Jhoana Doe",
               phone: "+56 9 5555 5555"
             },
             {
+              id: "user-2",
               avatar: require("../images/template-team-member-2.jpg"),
               cv: "Ingeniero Comercial, Master en Finanzas. Inversor inmobiliario, con 6 años de experiencia en Banca.",
               email: "usuario2@example.com",
-              fullName: "Usuario 2",
+              fullName: "Jhon Doe",
               phone: "+56 9 5555 5555"
             },
             {
+              id: "user-3",
               avatar: require("../images/template-team-member-3.jpg"),
               cv: "Ingeniero Comercial, Master en Finanzas. Inversor inmobiliario, con 6 años de experiencia en Banca, Mesa de Dinero. 6 años en el corretaje de propiedades, especializado en el manejo de cartera de propiedades. ",
               email: "usuario3@example.com",
-              fullName: "Usuario 3",
+              fullName: "James Doe",
               phone: "+56 9 5555 5555"
-            },
-            {
-              //avatar: require("../images/template-team-member-4.jpg"),
-              avatar: "",
-              cv: "Ingeniero Comercial, Master en Finanzas. Inversor inmobiliario, con 6 años de experiencia en Banca, Mesa de Dinero. 6 años en el corretaje de propiedades, especializado en el manejo de cartera de propiedades. ",
-              email: "usuario4@example.com",
-              fullName: "Usuario 4",
-              phone: "+56 9 5555 5555"
-            }                          
+            }                        
           ]
         },
         ubication: {

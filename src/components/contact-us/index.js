@@ -1,10 +1,10 @@
 import React, { useContext, useState, useReducer } from 'react';
 import context from '../../context';
-import { Container, Row, Col } from 'react-bootstrap';
+import { Row, Col } from 'react-bootstrap';
 import styled from 'styled-components';
 import { LoadingOutlined, CheckCircleFilled} from '@ant-design/icons';
 
-import { Section, Button } from '../../styled-components';
+import { Section, Button, Container } from '../../styled-components';
 import { Input, Textarea } from '../inputs';
 
 const Form = styled.form`

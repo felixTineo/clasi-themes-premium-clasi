@@ -7,7 +7,7 @@ import { Section, Button } from '../../styled-components';
 import Description from '../carousels/description';
 
 const SectionCustom = styled(Section)`
-  background-color: ${props=> props.theme.primaryColor};
+  background-image: linear-gradient( 67.2deg, rgba(165,90,240,1) -7.5%, rgba(37,208,199,1) 62.7% );
 `
 const InfoCont = styled.div`
   display: flex;

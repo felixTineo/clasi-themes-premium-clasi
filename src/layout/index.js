@@ -36,7 +36,7 @@ const GlobalStyles = createGlobalStyle`
   a{
     text-decoration: none !important;
     &:visited{
-      color: hsl(0, 0%, 23%);
+      color: #3b3b3b;
     }
   }
   h1, h2, h3, h4, h5, h6{

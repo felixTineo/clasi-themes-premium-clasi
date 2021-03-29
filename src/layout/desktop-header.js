@@ -1,8 +1,8 @@
 import React, { useContext, useState, Fragment } from 'react';
 import context from '../context';
 import styled from 'styled-components';
-import AniLink from "gatsby-plugin-transition-link/AniLink";
 
+import Link from "../components/link";
 import RateBar from './ratebar';
 import Logo from './logo';
 import { NavLink, NavButton, Container } from '../styled-components';
@@ -51,34 +51,32 @@ export default ({ dark })=> {
       <RateBar />
       <Container>
         <Navigation>
-          <AniLink paintDrip hex={state.primaryColor} to="/" duration={.5}>
+          <Link to="/" >
             <Logo dark={dark} light={!dark} />
-          </AniLink>
+          </Link>
           <NavList horizontal>
             <NavItem>
-              <AniLink paintDrip hex={state.primaryColor} to="/properties" duration={.5}>
-                
-                  Inicio
-                
-              </AniLink>
+              <Link to="/" >                
+                Inicio                
+              </Link>
               <Line />            
             </NavItem>            
             <NavItem>
-              <AniLink paintDrip hex={state.primaryColor} to="/properties" duration={.5}>
-                  Propiedades
-              </AniLink>    
+              <Link to="/properties" >
+                Propiedades
+              </Link>    
               <Line />                    
             </NavItem>
             <NavItem>
-              <AniLink paintDrip hex={state.primaryColor} to="/about" duration={.5}>
-                  Nosotros
-              </AniLink>            
+              <Link to="/about" >
+                Nosotros
+              </Link>            
               <Line />            
             </NavItem>
           </NavList>
-        <AniLink paintDrip hex={state.primaryColor} to="/contact" duration={.5}>
+        <Link to="/contact" >
           <NavButton>Contacto</NavButton>
-        </AniLink>          
+        </Link>          
         </Navigation>
       </Container>
     </Header>    

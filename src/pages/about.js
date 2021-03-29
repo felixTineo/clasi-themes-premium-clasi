@@ -17,8 +17,8 @@ export default ()=> {
       <Description />
       <Stats />
       <Team />
-      <Ubication />
-      <Contact />
+{/*      <Ubication />
+      <Contact />*/}
     </Fragment>
   )
 }

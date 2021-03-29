@@ -1,13 +1,13 @@
 import React, { Fragment, useEffect, createContext, useReducer, useContext } from 'react';
 import styled from 'styled-components';
 import context from '../../context/property';
-import { Container, Row, Col } from 'react-bootstrap';
+import { Row, Col } from 'react-bootstrap';
 import ImageGallery from 'react-image-gallery';
 import 'react-image-gallery/styles/css/image-gallery.css';
 import { LeftOutlined, RightOutlined } from '@ant-design/icons';
 import { truncate, priceFormat } from '../../util';
 
-import { Section } from '../../styled-components';
+import { Section, Container } from '../../styled-components';
 import { Site, Surface, Rooms, Bath, Parking } from '../../icons';
 
 const ImageGalleryCustom = styled(ImageGallery)`

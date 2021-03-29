@@ -7,7 +7,7 @@ import { CarouselProvider, Slider, Slide, ButtonBack, ButtonNext, Dot } from 'pu
 import { ArrowLeftOutlined, ArrowRightOutlined } from '@ant-design/icons';
 import 'pure-react-carousel/dist/react-carousel.es.css';
 import { v1 as uuid } from 'uuid';
-import AniLink from "gatsby-plugin-transition-link/AniLink";
+import Link from "../link";
 import { Site, Surface, Parking, Bath, Rooms } from '../../icons';
 import { gsap } from 'gsap';
 
@@ -25,7 +25,7 @@ const ButtonContainer = styled.div`
   justify-content: space-between;
   width: 100px;
   position: absolute;
-  bottom: 1rem;
+  top: .5rem;
   right: 4rem;
 `
 const ButtonBackCustom = styled(ButtonBack)`
@@ -39,12 +39,12 @@ const ButtonBackCustom = styled(ButtonBack)`
   display: flex;
   justify-content: center;
   align-items: center;
-  color: rgba(0, 0, 0, .7);
+  color: hsl(0, 0%, 43%);
   //position: absolute;
   //top: 50%;
   //left: -1rem;
   &:hover{
-    color: #000;
+    color: hsl(0, 0%, 13%);
   }
 `
 const ButtonNextCustom = styled(ButtonNext)`
@@ -58,15 +58,15 @@ const ButtonNextCustom = styled(ButtonNext)`
   display: flex;
   justify-content: center;
   align-items: center;
-  color: rgba(0, 0, 0, .7);
+  color: hsl(0, 0%, 43%);
   //position: absolute;
   //top: 50%;
-  //right: -1rem;
+  //left: -1rem;
   &:hover{
-    color: #000;
+    color: hsl(0, 0%, 13%);
   }
 `
-const AniLinkCustom = styled(AniLink)`
+const LinkCustom = styled(Link)`
   color: inherit !important;
   display: block;
   overflow: hidden;
@@ -82,7 +82,14 @@ const AniLinkCustom = styled(AniLink)`
 `
 const Card = styled.div`
   width: 95%;
-  
+  transition: 250ms ease;
+  &:hover{
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, .12),
+              0px 2px 2px rgba(0, 0, 0, .12),
+              0px 4px 4px rgba(0, 0, 0, .12),
+              0px 8px 8px rgba(0, 0, 0, .12),
+              0px 16px 16px rgba(0, 0, 0, .12);
+  }
   @media(min-width: 768px){
     width: 100%;
   }
@@ -101,7 +108,7 @@ const CharsList = styled.div`
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5));
+  background-image: linear-gradient( 67.2deg, rgba(165,90,240,.9) -7.5%, rgba(37,208,199,.9) 62.7% );
   opacity: 0;
   z-index: 5;
   transition: all 0.25s cubic-bezier(0.445, 0.05, 0.55, 0.95) 0s;
@@ -111,7 +118,7 @@ const CharsList = styled.div`
   span{
     margin-left: .5rem;
   }  
-  ${AniLinkCustom}:hover & {
+  ${Card}:hover & {
     opacity: 1;
   }
 `
@@ -153,13 +160,14 @@ const DragCircle = styled.p`
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 2px solid #fff;
-  font-weight: bold;
+  border: 1px solid #fff;
   color: #fff;
   z-index: 100;
   user-select: none;
   pointer-events: none;
   opacity: 0;
+  font-family: 'Raleway', sans-serif !important;
+  font-weight: 300;
 `
 
 const Property = ({
@@ -175,7 +183,7 @@ const Property = ({
 }) => {
   const state = useContext(context);
   return(
-    <AniLinkCustom paintDrip hex={state.primaryColor} to={`/property?id=${_id}`} duration={.5}>
+    <Link to={`/property?id=${_id}`}>
       <Card>
         <Image src={mainImage}>
           <CharsList>
@@ -224,7 +232,7 @@ const Property = ({
           </Code>
         </TitleCont>
       </Card>
-    </AniLinkCustom>
+    </Link>
   )
 }
 
@@ -271,7 +279,7 @@ export default ()=>{
   return(
     <MainCont id="wrapper">
       <DragCircle id="drag">
-        DRAG
+        Drag
       </DragCircle>
       <CarouselProvider
         naturalSlideWidth={100}

@@ -2,9 +2,9 @@ import React, { Fragment, useEffect, createContext, useReducer, useRef } from 'r
 import styled from 'styled-components';
 import Context from '../context/property';
 import { LoadingOutlined } from '@ant-design/icons';
-import { Container, Row, Col } from 'react-bootstrap';
+import { Row, Col } from 'react-bootstrap';
 
-import { Section } from '../styled-components';
+import { Section, Container } from '../styled-components';
 import Hero from '../components/property/hero';
 import Property from '../components/property/property';
 import Contact from '../components/property/contact';
@@ -74,14 +74,12 @@ export default ({ location })=> {
             <Col xs={12} md={5}>
               <Contact />
             </Col>            
-            <Col xs={12}>
-              <Title>Propiedades que podrían interesarte</Title>
-              <FeaturedProperties />
-              <br />
-              <br />
-            </Col>
           </Row>
         </Container>
+        <Title>Propiedades que podrían interesarte</Title>
+              <FeaturedProperties />
+              <br />
+              <br />        
       </Fragment>
     </Context.Provider>
   )

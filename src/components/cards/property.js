@@ -1,15 +1,15 @@
 import React, { useContext } from 'react';
 import context from '../../context';
 import styled from 'styled-components';
-import AniLink from "gatsby-plugin-transition-link/AniLink";
+import Link from "../link";
 import { priceFormat, truncate } from '../../util';
 import { Site, Surface, Parking, Bath, Rooms } from '../../icons';
 
-const AniLinkCustom = styled(AniLink)`
-  color: inherit !important;
-  display: block;
-  border-radius: 6px;
-  overflow: hidden;
+
+const Card = styled.div`
+  width: 95%;
+  border: 1px solid rgba(0, 0, 0, .1);
+  min-height: 496.09px;
   transition: 250ms ease;
   &:hover{
     box-shadow: 0px 1px 1px rgba(0, 0, 0, .12),
@@ -18,12 +18,6 @@ const AniLinkCustom = styled(AniLink)`
               0px 8px 8px rgba(0, 0, 0, .12),
               0px 16px 16px rgba(0, 0, 0, .12);
   }
-`
-
-const Card = styled.div`
-  width: 95%;
-  border: 1px solid rgba(0, 0, 0, .1);
-  min-height: 496.09px;
   @media(min-width: 768px){
     width: 100%;
   }
@@ -85,7 +79,7 @@ export default ({
 })=>{
   const state = useContext(context);
   return(
-    <AniLinkCustom paintDrip hex={state.primaryColor} to={`/property?id=${_id}`} duration={.5}>
+    <Link to={`/property?id=${_id}`}>
       <Card>
         <Image src={mainImage} />
         <InfoCont>
@@ -138,6 +132,6 @@ export default ({
           </CharsList>      
         </InfoCont>
       </Card>
-    </AniLinkCustom>
+    </Link>
   )
 }

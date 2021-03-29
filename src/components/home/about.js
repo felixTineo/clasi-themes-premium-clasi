@@ -1,13 +1,13 @@
 import React, { useContext } from 'react';
 import context from '../../context';
 import styled from 'styled-components';
-import AniLink from "gatsby-plugin-transition-link/AniLink";
+import Link from "../link";
 import { Container, Row, Col } from 'react-bootstrap';
 
 import { Section, Button } from '../../styled-components';
 
 const SectionCustom = styled(Section)`
-  background-color: ${props=> props.theme.primaryColor};
+  
 `
 const InfoCont = styled.div`
   display: flex;
@@ -20,7 +20,6 @@ const InfoCont = styled.div`
   margin-right: auto;
   margin-left: auto;    
   padding-top: 1rem;  
-  color: #fff;
   @media (min-width: 768px){
     max-width: 720px;
     padding: 2rem 15px;
@@ -31,7 +30,7 @@ const InfoCont = styled.div`
   }
 `
 const Title = styled.h2`
-
+color: ${props => props.theme.primaryColor};
 `
 const SubTitle = styled.p`
 
@@ -56,11 +55,11 @@ export default ()=> {
             <SubTitle>
               {state.home.about.banner.subTitle}
             </SubTitle>
-            <AniLink paintDrip hex={state.primaryColor} to="/about" duration={.5}>
-              <Button block>
+            <Link paintDrip hex={state.primaryColor} to="/about" duration={.5}>
+              <Button primary>
                 {state.home.about.banner.buttonText}
               </Button>
-            </AniLink>
+            </Link>
           </InfoCont>
         </Col>
         <Col xs={12} md={12} lg={6}>

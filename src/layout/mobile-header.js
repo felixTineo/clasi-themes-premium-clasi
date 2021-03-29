@@ -3,7 +3,7 @@ import context from '../context';
 import styled from 'styled-components';
 import HamburgerMenu from 'react-hamburger-menu';
 import { Container } from 'react-bootstrap';
-import AniLink from "gatsby-plugin-transition-link/AniLink";
+import Link from "../components/link";
 import { FacebookOutlined, InstagramOutlined, TwitterOutlined } from '@ant-design/icons';
 
 import Logo from './logo';
@@ -57,9 +57,9 @@ export default ()=> {
     <Header className="d-lg-none">
       <Container>
         <Navigation>
-          <AniLink paintDrip hex={state.primaryColor} to="/" duration={.5}>
+          <Link to="/" onClick={()=> setOpen(false)}>
             <Logo mobile/>
-          </AniLink>
+          </Link>
           <HamburgerMenu
             isOpen={open}
             menuClicked={()=> setOpen(!open)}
@@ -78,48 +78,48 @@ export default ()=> {
       <RateBar />
       <NavList>
         <NavItem>
-          <AniLink paintDrip hex={state.primaryColor} to="/properties" onClick={()=> setOpen(false)} duration={.5}>
+          <Link to="/properties" onClick={()=> setOpen(false)} >
             <NavLink >
               Propiedades
             </NavLink>
-          </AniLink>
+          </Link>
         </NavItem>
         <NavItem>
-          <AniLink paintDrip hex={state.primaryColor} to="/about" onClick={()=> setOpen(false)} duration={.5}>
+          <Link to="/about" onClick={()=> setOpen(false)} >
             <NavLink >
               Nosotros
             </NavLink>
-          </AniLink>
+          </Link>
         </NavItem>
         <NavItem>
-          <AniLink paintDrip hex={state.primaryColor} to="/contact" onClick={()=> setOpen(false)} duration={.5}>
+          <Link to="/contact" onClick={()=> setOpen(false)} >
             <NavLink >
               Contacto
             </NavLink>
-          </AniLink>
+          </Link>
         </NavItem>                
       </NavList>
       <NavList horizontal>
         <NavItem>
-          <AniLink href={state.facebook} target="_blank" rel="noopener">
+          <Link href={state.facebook} target="_blank" rel="noopener">
             <NavLink >
               <FacebookOutlined />
             </NavLink>
-          </AniLink>
+          </Link>
         </NavItem>           
         <NavItem>
-          <AniLink href={state.instagram} target="_blank" rel="noopener">
+          <Link href={state.instagram} target="_blank" rel="noopener">
             <NavLink >
               <InstagramOutlined style={{ margin: "0 1rem" }} />
             </NavLink>
-          </AniLink>
+          </Link>
         </NavItem>           
         <NavItem>
-          <AniLink href={state.twitter} target="_blank" rel="noopener">
+          <Link href={state.twitter} target="_blank" rel="noopener">
             <NavLink >
               <TwitterOutlined />
             </NavLink>
-          </AniLink>
+          </Link>
         </NavItem>                           
       </NavList>
     </NavPanel>

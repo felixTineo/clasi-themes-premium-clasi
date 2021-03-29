@@ -1,21 +1,20 @@
 import React, { useContext } from 'react';
 import context from '../../context';
 import styled from 'styled-components';
-import { Container, Row, Col } from 'react-bootstrap';
+import { Row, Col } from 'react-bootstrap';
 
-import { Section } from '../../styled-components';
+import { Section, Container } from '../../styled-components';
 import { ChartYears, ChartProperties, ChartTansactions, ChartTeam } from '../../icons'
 
 const Card = styled.div`
   width: 95%;
   height: 281px;
-  background-color: ${props => props.theme.primaryColor};
   font-size: 3rem;
   display :flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  color: #fff;
+  //color: #fff;
   margin-bottom: 3rem;
   @media(min-width: 768px){
     width: 100%;
