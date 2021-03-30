@@ -44,7 +44,7 @@ export default ()=> {
           <Col xs={12} md={{ span: 5, order: 1 }}>
             <InfoCont>
             <Title>
-              ¿Quienes somos?
+              ¿Quiénes somos?
             </Title>
             <Description dangerouslySetInnerHTML={{ __html: state.about.history.description }} />
             </InfoCont>

@@ -163,7 +163,7 @@ export default ()=> {
         <TitleCont>
         <Title>NUESTROS SERVICIOS</Title>
         <SubTitle>
-          Porqué elegirnos
+          Por qué elegirnos
         </SubTitle>
         <SubTotle2>
           Somos un equipo multidisciplinario de especialistas enfocados en tus necesidades de vivienda.
