@@ -4,6 +4,7 @@ import Hero from '../components/home/hero';
 import Properties from '../components/home/properties';
 import About from '../components/home/about';
 import OfficeInfo from '../components/home/office-info';
+import Testimonials from '../components/home/testimonials';
 import Contact from '../components/contact';
 
 export default ()=> {
@@ -14,6 +15,7 @@ export default ()=> {
       <Properties />
       <About />
       <OfficeInfo />
+      <Testimonials />
       <Contact />
     </Fragment>
   )

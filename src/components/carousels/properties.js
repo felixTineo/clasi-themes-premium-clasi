@@ -279,7 +279,7 @@ export default ()=>{
   return(
     <MainCont id="wrapper">
       <DragCircle id="drag">
-        Drag
+        VER
       </DragCircle>
       <CarouselProvider
         naturalSlideWidth={100}

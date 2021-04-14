@@ -16,9 +16,12 @@ const Title = styled.p`
 `
 const SubTitle = styled.p`
   font-size: 2.5rem;
-  width: 60%;
+  width: 100%;
   font-family: 'Raleway', sans-serif !important;
   font-weight: 300;
+  @media(min-width: 768px){
+    width: 60%;
+  }
 `
 const PropertiesCarouselCont = styled.div`
   min-height: 50vh;

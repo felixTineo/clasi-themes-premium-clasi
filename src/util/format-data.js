@@ -57,18 +57,23 @@ export default (data) => {
           items: data.home && data.home.reviews && data.home.reviews.items.length ? data.home.reviews.items : [
             {
               id: null,
-              review: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vulputate sapien at nisi volutpat dictum. Maecenas vel lorem tellus. Sed sit amet sollicitudin nisi. Sed consectetur eget orci sit amet condimentum.",
-              author: "Cliente 1"
+              review: "La atención profesional y personalizada de Paola es algo que se agradece totalmente. Dejar en las manos la venta de mi departamento fue la mejor decisión que pude tomar. Se vendió en un excelente precio y en un buen plazo, totalmente recomendable.",
+              author: "Karen Báez."
             },
             {
               id: null,
-              review: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vulputate sapien at nisi volutpat dictum. Maecenas vel lorem tellus. Sed sit amet sollicitudin nisi. Sed consectetur eget orci sit amet condimentum.",
-              author: "Cliente 2"
+              review: "Excelente servicio, todo fue un proceso claro y transparente. Muy recomendable Paola Muñoz.",
+              author: "Luis Chadwick."
             },
             {
               id: null,
-              review: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vulputate sapien at nisi volutpat dictum. Maecenas vel lorem tellus. Sed sit amet sollicitudin nisi. Sed consectetur eget orci sit amet condimentum.",
-              author: "Cliente 3"
+              review: "Necesitaba encontrar una propiedad con algunas características un poco especiales, gracias al servicio de PM Asesorías, pude concretar mi proyecto, muchas gracias.",
+              author: "Iñigo Bustamante."
+            },
+            {
+              id: null,
+              review: "Encargué la venta de mi propiedad, todo el proceso fue muy bien llevado y se vendió bastante rápido, muy buena experiencia.",
+              author: "Hernán le Roux Fossatti."
             }
           ]
         }                    
