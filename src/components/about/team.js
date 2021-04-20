@@ -8,20 +8,21 @@ import { gsap } from 'gsap';
 import { Section, Container } from '../../styled-components';
 
 const SectionCustom = styled(Section)`
-  background-color: #1f1f1f;
+  //background-color: #1f1f1f;
+  background-color: #f7f3f0;
   margin: 0;
-  padding: 6rem 0;
+  padding: 2rem 0;
 `
 
 const Title = styled.h2`
-  color: #fff;
+  //color: #fff;
   font-size: 1rem;
   margin-bottom: 4rem;
   text-transform: uppercase;
 `
 const Card = styled.div`
   width: 100%;
-  background-color: #fff;
+  background-color: #f7f3f0;
   min-height: 640px;
 `
 const Avatar = styled.div`
@@ -34,6 +35,7 @@ const Avatar = styled.div`
 `
 const InfoCont = styled.div`
   background-color: #fff;
+  background-color: #f7f3f0;
   padding: 1rem;
 `
 const Name = styled.p`
@@ -41,6 +43,7 @@ const Name = styled.p`
   font-size: 2rem;
   font-family: 'Raleway', sans-serif !important;
   font-weight: 300;
+  color: #00aeef;
 `
 const CertificationsList = styled.ul`
   font-size: .8rem;
@@ -54,6 +57,7 @@ const InfoList = styled.ul`
   height: 100%;
   z-index: 5;
   background-color: #fff;
+  background-color: #f7f3f0;
   transition: 250ms;
   overflow: hidden;
   padding: 0;
@@ -202,7 +206,7 @@ export default ()=> {
         <Row>
           <Col xs={12}>
             <Title>
-              Quienes somos
+              Nuestro equipo
             </Title>
           </Col>
           {
