@@ -124,25 +124,45 @@ export default (data) => {
             {
               id: "user-1",
               avatar: require("../images/template-team-member-1.jpg"),
-              cv: "Ingeniero Comercial, Master en Finanzas. Inversor inmobiliario, con 6 años de experiencia en Banca, Mesa de Dinero. 6 años en el corretaje de propiedades, especializado en el manejo de cartera de propiedades. ",
+              certifications: [
+                "Certificada en Publicidad y Marketing en UDP",
+                "Certificada en Coaching emocional",
+                "10 años de experiencia en supervisión y liderazgo.",
+                "Experta en Asesorías Financieras y Negocios Inmobiliarios",
+                "Certificada por Coproch y Nexxos."
+              ],
+              cv: "Actualmente fundadora de PM Asesorías Inmobiliarias, con más de 8 años de experiencia en el rubro.",
               email: "usuario1@example.com",
-              fullName: "Jhoana Doe",
+              fullName: "Paola Muñóz",
               phone: "+56 9 5555 5555"
             },
             {
               id: "user-2",
               avatar: require("../images/template-team-member-2.jpg"),
-              cv: "Ingeniero Comercial, Master en Finanzas. Inversor inmobiliario, con 6 años de experiencia en Banca.",
+              certifications: [
+                "Arquitecto Universidad Mayor",
+                "Master en Economia Urbana (Universidad Torcuato di Tella, Buenos Aires)",
+                "Diplomado Gestión de Proyectos Inmobiliarios (Universitat Politécnica de Valencia)",
+              ],
+              cv: "Profesional con más de 12 años de experiencia en el área de la Arquitectura, construcción y Asesorías en Inversión Inmobiliaria. Posee un vasto conocimiento de normas especiales a instrumentos de planificación y gran expertise en la evaluación de proyectos inmobiliarios, brindando asesoría continua a grandes inmobiliarias, fondos de inversión nacionales y nacionales. Hoy en día desarrolla proyectos tanto como en Chile y Perú.",
               email: "usuario2@example.com",
-              fullName: "Jhon Doe",
+              fullName: "Sebastian Pacheco Chahud",
               phone: "+56 9 5555 5555"
             },
             {
               id: "user-3",
               avatar: require("../images/template-team-member-3.jpg"),
-              cv: "Ingeniero Comercial, Master en Finanzas. Inversor inmobiliario, con 6 años de experiencia en Banca, Mesa de Dinero. 6 años en el corretaje de propiedades, especializado en el manejo de cartera de propiedades. ",
+              certifications: [
+                "Abogado, licenciado de la Universidad de los Andes.",
+                "Juró ante la Excma. Corte Suprema en diciembre de 2009.",
+                "11 años de experiencia en el ejercicio de la profesión, con dedicación especial en derecho minero, inmobiliario y corporativo.",
+                "Socio colaborador de la Asociación Gremial Minera Metropolitana desde el año 2021",
+                "Asesor jurídico de Colliers International Chile, área de Regularizaciones desde el año 2017",
+                "Miembro del área jurídica de CEMIN Holding Minero desde el año 2011 hasta el 2016."
+              ],
+              cv: "Actualmente, ejerce de manera independiente.",
               email: "usuario3@example.com",
-              fullName: "James Doe",
+              fullName: "Felipe G. Reposi Malfanti",
               phone: "+56 9 5555 5555"
             }                        
           ]

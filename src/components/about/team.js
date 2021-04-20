@@ -21,6 +21,8 @@ const Title = styled.h2`
 `
 const Card = styled.div`
   width: 100%;
+  background-color: #fff;
+  min-height: 640px;
 `
 const Avatar = styled.div`
   width: 100%;
@@ -40,13 +42,16 @@ const Name = styled.p`
   font-family: 'Raleway', sans-serif !important;
   font-weight: 300;
 `
+const CertificationsList = styled.ul`
+  font-size: .8rem;
+`
 const InfoList = styled.ul`
   list-style: none;
-  position: absolute;
-  top: 0;
-  left: 0;
+  position: relative;
+  //top: 0;
+  //left: 0;
   width: 100%;
-  height: 0;
+  height: 100%;
   z-index: 5;
   background-color: #fff;
   transition: 250ms;
@@ -88,25 +93,35 @@ const Resume = styled.p`
   text-align: center;
   flex: 1;
 `
-const User = ({ avatar, cv, email, fullName, phone, id }) => {
+const User = ({ avatar, cv, email, fullName, phone, id, certifications }) => {
   return(
     <Card
-      onMouseEnter={()=> gsap.to(`#${id}`, { height: "100%", duration: .3 , ease: "linear" })}
-      onMouseLeave={()=> gsap.to(`#${id}`, { height: 0, duration: .3, ease: "linear" })}
+      //onMouseEnter={()=> gsap.to(`#${id}`, { height: "100%", duration: .3 , ease: "linear" })}
+      //onMouseLeave={()=> gsap.to(`#${id}`, { height: 0, duration: .3, ease: "linear" })}
     >
       <InfoCont>
         <Name>
           {fullName}
         </Name>
-        <Position>
+{/*        <Position>
           agente
-        </Position>
+</Position>*/}
       </InfoCont>
-      <Avatar src={avatar}>
         <InfoList id={id}>
           <li>
             {cv}
           </li>
+        </InfoList>
+        <CertificationsList>
+          {
+            certifications.map((item, i)=> (
+              <li key={i}>
+                {item}
+              </li>
+            ))
+          }
+        </CertificationsList>
+{/*        <InfoList id={id}>
           <li >
             <p className="contact">
               {email}
@@ -115,8 +130,7 @@ const User = ({ avatar, cv, email, fullName, phone, id }) => {
               {phone}
             </span>
           </li>
-        </InfoList>
-      </Avatar>
+        </InfoList>*/}
     </Card>
   )
 }
